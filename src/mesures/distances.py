@@ -11,13 +11,6 @@ def hamming_distance(avk, avl):
     return dist
 
 
-def r(v, i):
-    return np.where(v == i)[0][0]
-
-
 def spearman_distance(rvk, rvl):
-    dist = 0
-    m = rvk.shape[0]
-    for i in range(m):
-        dist += np.abs(r(rvk, i) - r(rvl, i))
-    return dist
+    dist = np.abs(np.argsort(rvk) - np.argsort(rvl))
+    return np.sum(dist)
