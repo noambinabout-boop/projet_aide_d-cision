@@ -10,6 +10,7 @@ def phi_2_appro(vote, distances):
     indices = np.arange(m)
     phi2 = 0
 
+    # Formule donnée dans l'énoncé
     for ck, cl in combinations(indices, 2):
         calc = (n - distances[ck][cl])/(n * comb(m, 2))
         phi2 += calc
@@ -22,6 +23,7 @@ def phi_2_ordre_totaux(vote, distances):
     indices = np.arange(m)
     phi2 = 0
 
+    # Formule donnée dans l'énoncé
     for ck, cl in combinations(indices, 2):
         calc = (n - distances[ck][cl])/(n * comb(m, 2))
         phi2 += calc

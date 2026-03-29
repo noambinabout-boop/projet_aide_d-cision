@@ -22,7 +22,6 @@ def creation_vote_ordre_totaux(n, m, polarisation):
         vote[n // 2:] = camp_2
 
     else:
-        # Il n'y a plus seulement deux camps qui s'opposent : plus le bruit est élevé plus les votes sont disparates
         for i in range(n):
             # Plus polarisation est grand, plus on risque de tomber dans camp_2
             camp = np.random.choice([0, 1], p=[1 - polarisation / 2,
